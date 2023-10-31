@@ -1,8 +1,10 @@
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Messages from './Messages'
 import MessageStandalone from './MessageStandalone'
 import Home from './Home'
+import About from './About'
 import Header from './Header'
 import Footer from './Footer'
 
@@ -11,10 +13,13 @@ const App = props => {
     <div className="App">
       <Router>
         <Header />
-        <main className="App-main">
+          <main>        
           <Routes>
             {/* a route for the home page */}
             <Route path="/" element={<Home />} />
+
+            {/* a route for the About*/}
+             <Route path="/About" element={<About />} />
 
             {/* a route to see a list of all messages */}
             <Route path="/messages" element={<Messages />} />
